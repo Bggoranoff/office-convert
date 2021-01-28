@@ -1,7 +1,12 @@
 package com.github.bggoranoff.model.file;
 
-public interface FileEntity {
-    void convert(String dest, String format);
+import org.jodconverter.core.office.OfficeException;
 
-    void generatePdf(String dest);
+import java.io.FileNotFoundException;
+import java.nio.file.FileAlreadyExistsException;
+
+public interface FileEntity {
+    void convert(String dest, String format) throws FileAlreadyExistsException, FileNotFoundException, OfficeException;
+
+    void generatePdf(String dest) throws FileNotFoundException, OfficeException, FileAlreadyExistsException;
 }
