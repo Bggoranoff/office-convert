@@ -4,13 +4,3 @@ build:
   stage: build
   script:
     - mvn compile
-
-test:
-  stage: test
-  script:
-    - mvn verify
-  artifacts:
-    reports:
-      junit:
-        - target/surefire-reports/TEST-*.xml
-        - target/failsafe-reports/TEST-*.xml
