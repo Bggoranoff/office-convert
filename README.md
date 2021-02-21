@@ -15,11 +15,17 @@ Add the following lines to your pom.xml file:
 <br />
 ```xml
 <project>
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
             <groupId>com.github.bggoranoff</groupId>
             <artifactId>office-convert</artifactId>
-            <version>1.0</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
